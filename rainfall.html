@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>India Annual Rainfall</title>
+    <style>
+        /* Global styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9fb;
+            color: #333;
+            padding: 0;
+        }
+
+        /* Navigation styles */
+        nav {
+            background-color: #264653;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #e9c46a;
+        }
+
+        /* Header section */
+        header {
+            background: url('https://source.unsplash.com/1600x900/?drought,land') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Container for the iframe and content */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Information section */
+        .info-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .info-section h2 {
+            font-size: 2rem;
+            color: #2a9d8f;
+            margin-bottom: 20px;
+        }
+
+        .info-section p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Styling for the iframe */
+        iframe {
+            border: none;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            width: 100%;
+            max-width: 1000px;
+            height: 80vh;
+        }
+
+        /* Call to action */
+        .cta {
+            background-color: #2a9d8f;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 40px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta:hover {
+            background-color: #264653;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #264653;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            iframe {
+                height: 400px;
+            }
+
+            .cta {
+                font-size: 1rem;
+            }
+
+            .info-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">India Annual Rainfall</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#map">Rainfall Map</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Information Section -->
+        <section class="info-section" id="info">
+            <h2>About India Annual Rainfall</h2>
+            <p>The India Rainfall Monitor provides historical rainfall data to assist farmers, and environmental agencies in tracking rainfall patterns across the country. By leveraging data from multiple sources, we offer insights into current and forecasted rainfall trends, enabling users to take informed decisions to manage water resources, agriculture, and flood risk mitigation effectively.</p>
+        </section>
+
+        <!-- Interactive Drought Map Section -->
+        <h2 id="map">Annual Rainfall Map 2023</h2>
+        <iframe src="color_rainfall_india_with_legend_border.svg" allowfullscreen></iframe>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2024 India Annual Rainfall. All rights reserved. | <a href="contact.html" style="color:#e9c46a;">Contact Us</a></p>
+    </footer>
+</body>
+</html>

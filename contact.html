@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Meet Our Team</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: fadeInDown 1.2s ease-in-out;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            width: 300%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            top: 0;
+            left: -50%;
+            transform: rotate(45deg);
+            animation: slideBg 10s linear infinite;
+        }
+
+        /* Team Info Section */
+        .team-info {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #007BFF;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .team-info h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #007BFF;
+            margin: 0 auto;
+            margin-top: 10px;
+            opacity: 0;
+            animation: fadeIn 1s 0.6s forwards;
+        }
+
+        .team-info p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #555;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeUp 1s forwards;
+            transition: all 0.3s ease;
+        }
+
+        /* Pop-Up Hover Effect on Team Names */
+        .team-info p:hover {
+            transform: scale(1.1);
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        /* Sequential Animation Delays for Team Members */
+        .team-info p:nth-child(2) { animation-delay: 0.5s; }
+        .team-info p:nth-child(3) { animation-delay: 1s; }
+        .team-info p:nth-child(4) { animation-delay: 1.5s; }
+        .team-info p:nth-child(5) { animation-delay: 2s; }
+        .team-info p:nth-child(6) { animation-delay: 2.5s; } /* Added for the sixth member */
+
+        /* Footer Section */
+        footer {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        footer p a {
+            color: #fff;
+            text-decoration: underline; /* Keep underline for footer links */
+            transition: color 0.3s ease;
+        }
+
+        footer p a:hover {
+            color: #e9c46a;
+        }
+
+        /* Remove underline from team member links */
+        .team-info a {
+            text-decoration: none; /* No underline */
+            color: #007BFF; /* Link color */
+        }
+
+        .team-info a:hover {
+            color: #0056b3; /* Darker color on hover */
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideBg {
+            from { left: -50%; }
+            to { left: 100%; }
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            .team-info h2 { font-size: 2rem; }
+            .team-info p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <h1>Meet Our Team</h1>
+</header>
+
+<!-- Team Info Section -->
+<div class="team-info">
+    <h2>Team Members</h2>
+    <p>1. <a href="https://www.linkedin.com/in/divyam-desai-075b06253/">Divyam Desai</a> - Project Lead </p>
+    <p>2. <a href="https://www.linkedin.com/in/swayam-parekh/">Swayam Parekh</a> - Developer </p>
+    <p>3. <a href="https://www.linkedin.com/in/manthan-lad-79a932240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Manthan Lad</a> - Data Architect </p>
+    <p>4. <a href="https://www.linkedin.com/in/malav-radia-669b31270?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Malav Radiya</a> - Data Analyst </p>
+    <p>5. <a href="https://www.linkedin.com/in/krishna-panwala-66060228a/">Krishna Panwala</a> - Documentarian </p>
+    <p>6. <a href="https://www.linkedin.com/in/archi-gazdar-2b48ab249?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Archi Gazdar</a> - Designer</p>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Our Team. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

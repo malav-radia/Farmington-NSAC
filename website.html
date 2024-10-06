@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pull-out Tab with Animated Hyperlink Boxes</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Hamburger Button Styling */
+        .hamburger-button {
+            position: fixed;
+            top: 20px;
+            right: 20px; /* Position the hamburger icon on the right */
+            width: 35px;
+            height: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .hamburger-button div {
+            width: 100%;
+            height: 5px;
+            background-color: #333;
+            border-radius: 5px;
+        }
+
+        /* Pull-out Tab Styling */
+        .tab-content {
+            position: fixed;
+            top: 0;
+            right: -350px; /* Hidden completely before opening, positioned on the right */
+            width: 350px; /* Increased width for more space */
+            height: 100%;
+            background-color: #f4f4f4;
+            transition: 0.5s ease;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            visibility: hidden; /* Initially hidden */
+        }
+
+        .tab-content.visible {
+            visibility: visible; /* Visible when the tab is open */
+        }
+
+        /* Centering and styling the boxes inside the tab */
+        .tab-inner-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* Hyperlink boxes styling */
+        .link-box {
+            width: 200px;
+            padding: 15px;
+            margin: 10px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 10px;
+            background-color: #1976d2; /* Solid background color */
+            transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added depth */
+        }
+
+        /* Pop-out and color change on hover */
+        .link-box:hover {
+            transform: scale(1.05); /* Slight pop-out effect */
+            background-color: #2196F3; /* Slightly lighter blue */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+        }
+
+        /* Close Button Styling */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px; /* Position the close button inside the tab */
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            background-color: #ff1a1a;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hamburger Menu Button -->
+    <div class="hamburger-button" onclick="openTab()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Right Pull-Out Tab -->
+    <div id="leftTab" class="tab-content">
+        <button class="close-btn" onclick="closeTab()">Close</button>
+
+        <!-- Integrated content inside the pull-out tab -->
+        <div class="tab-inner-content">
+            <!-- Hyperlink boxes with pop-out animation -->
+            <a href="#" class="link-box">Link 1</a>
+            <a href="#" class="link-box">Link 2</a>
+            <a href="#" class="link-box">Link 3</a>
+            <a href="#" class="link-box">Link 4</a>
+            <a href="#" class="link-box">Link 5</a>
+            <a href="#" class="link-box">Link 6</a>
+        </div>
+    </div>
+
+    <script>
+        // Function to open the tab
+        function openTab() {
+            let tab = document.getElementById("leftTab");
+            tab.style.right = "0px"; // Adjust to show the tab from the right
+            tab.classList.add("visible"); // Make content visible
+        }
+
+        // Function to close the tab
+        function closeTab() {
+            let tab = document.getElementById("leftTab");
+            tab.style.right = "-350px"; // Adjust to match the increased width
+            tab.classList.remove("visible"); // Hide content again
+        }
+    </script>
+
+</body>
+</html>
